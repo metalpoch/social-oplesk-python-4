@@ -104,12 +104,7 @@ class PochBurguers:
             print("Opción invalida")
             return False, 0
 
-        valid, cost = self.__validate_purchase(qty=qty)
-        if valid:
-            return True, cost
-        else:
-            return False, 0
-
+        return self.__validate_purchase(qty=qty)
 
     def update_stock(self, qty: int):
         request = self.__request
